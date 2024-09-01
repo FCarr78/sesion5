@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento de Cambio</title>
+</head>
+<body>
+    <h2>Selecciona tu color favorito</h2>
+    <select id="colorSeleccionado">
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+    </select>
+    <br><br>
+    <p id="seleccionarColor">Tu color favorito es: </p>
+    <script>
+        const colorSeleccionado=document.getElementById('colorSeleccionado');
+        const seleccionarColor =document.getElementById('seleccionarColor');
+        colorSeleccionado=addEventListener('change', function(){
+            seleccionarColor.textContent = 'Tu color favorito es: ' +colorSeleccionado;
+        });
+
+    </script>
+</body>
+</html>
